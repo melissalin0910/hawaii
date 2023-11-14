@@ -1,0 +1,340 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, hr, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, output, ruby, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  font-family: "Noto Sans TC", "微軟正黑體", "Mohave", sans-serif;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*以上為CSS Reset設定*/
+body {
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #fff;
+  box-shadow: 3px 3px 5px 1px #757474;
+}
+header .logo {
+  display: flex;
+  align-items: center;
+  flex: 5 1 400px;
+  margin-left: 2rem;
+}
+header .logo img {
+  width: 6vw;
+  height: 6vw;
+}
+header .logo h1 {
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+header nav {
+  flex: 2 1 400px;
+}
+header nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+header nav ul li a {
+  color: #09777d;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+header nav ul li a:hover {
+  color: #038316;
+  cursor: pointer;
+  font-size: 1.75rem;
+}
+
+main .backImage {
+  background-image: url(../images/pexels-photo-416676.jpeg);
+  min-height: 90vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .backImage .filter {
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 90vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+main .backImage h3 {
+  font-size: 3rem;
+  color: #fff;
+  line-height: 4rem;
+  margin: 2rem 0;
+}
+main .backImage .start {
+  background-color: #3bf0e5;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.75rem;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+main .second {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+main .second h2 {
+  font-size: 2rem;
+  line-height: 1.5em;
+  margin: 2rem 0rem;
+}
+main .second .cards {
+  display: flex;
+  width: 80%;
+  min-height: 80vh;
+  flex-wrap: wrap;
+}
+main .second .cards .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+  flex: 1 1 300px;
+}
+main .second .cards .card .image-container {
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
+  overflow: hidden;
+}
+main .second .cards .card .image-container img {
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+main .second .cards .card .image-container img:hover {
+  transform: scale(1.2);
+}
+main .second .cards .card h4 {
+  font-size: 2rem;
+}
+main .second .cards .card p {
+  font-size: 1.25rem;
+  line-height: 2rem;
+}
+main .second .cards .card a {
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+  background-color: #09777d;
+  color: #fff;
+  font-size: 1.25rem;
+  border-radius: 1rem;
+}
+main .second .cards .card a:hover {
+  color: #3bf0e5;
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 35vh;
+  background-color: rgb(207, 207, 207);
+}
+footer .logo {
+  display: flex;
+  align-items: center;
+}
+footer .logo img {
+  width: 6vw;
+  height: 6vw;
+}
+footer .logo h1 {
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+footer nav {
+  width: 30vw;
+}
+footer nav ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+footer nav ul li {
+  flex-basis: 100px;
+  margin: 1rem 0;
+  justify-content: space-around;
+  width: 25%;
+}
+footer nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+footer .links {
+  display: flex;
+  width: 30vw;
+  justify-content: space-around;
+}
+footer .links a {
+  width: 25%;
+}
+footer .links a img {
+  width: 4vw;
+  height: 4vw;
+}
+
+@media screen and (max-width: 550px) {
+  header {
+    margin-left: 0.5rem;
+  }
+  header img {
+    width: 15vw;
+    height: 15vw;
+  }
+  header h1 {
+    font-size: 1rem;
+  }
+  footer img {
+    width: 15vw;
+    height: 15vw;
+  }
+  footer h1 {
+    font-size: 1rem;
+  }
+  footer .links a img {
+    height: 10vw;
+    width: 10vw;
+  }
+  main .backImage h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    line-height: 2rem;
+    margin: 1rem 0;
+  }
+  main .backImage .start {
+    background-color: #3bf0e5;
+    color: #fff;
+    padding: 0.5rem 0.75rem;
+    font-size: 1.15rem;
+    border: none;
+    border-radius: 0.75rem;
+    cursor: pointer;
+  }
+  main .second h2 {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    margin: 2rem 0rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  main .second .cards .card img {
+    width: 40vw;
+    height: 40vw;
+  }
+  main .second .cards .card h4 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+  }
+  main .second .cards .card p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin: 1rem 0;
+  }
+  main .second .cards .card a {
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    background-color: #09777d;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 1rem;
+    margin: 1rem 0;
+  }
+}
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #09777d;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #06507a;
+}/*# sourceMappingURL=style.css.map */

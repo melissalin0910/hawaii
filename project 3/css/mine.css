@@ -1,0 +1,17 @@
+      :root{
+        --mycolor01: #B78338;
+        --mycolor02: #915C4C;
+        --mycolor03: #40686a;
+        --mycolor04: #2F1812;
+        --mycolor05: #D5D2C1;
+        --mycolor06: #BD8E62;
+        --mycolor07: #A46843;
+        --mycolor08: #370D00;
+        --mytext01: #303030;
+        --mytext02: #fbfdfb; 
+      }
+
+      .bg-cover {
+        background-position: center center;
+        background-size: cover;
+      }
